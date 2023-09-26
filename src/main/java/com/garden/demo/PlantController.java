@@ -27,15 +27,11 @@ import com.cloudinary.Cloudinary;
 import com.cloudinary.utils.ObjectUtils;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin
 @RequestMapping
 public class PlantController {
     @Autowired
     CloudinaryConfig cloudinaryConfig;
-    // private final String CLOUD_NAME = "hsniemi"; // CLOUD_NAME
-    // private final String API_KEY = "173971533512891"; // CLOUDINARY_API_KEY
-    // private final String API_SECRET = "NN4F1jaNfyjaS15ZtkQkHL8mRno"; //
-    // CLOUDINARY_API_SECRET
 
     Cloudinary cloudinary = CloudinaryConfig.configureCloudinary();
 

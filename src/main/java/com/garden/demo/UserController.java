@@ -17,7 +17,7 @@ import com.cloudinary.utils.ObjectUtils;
 import com.garden.demo.encoder.PasswordEncoder;
 
 @CrossOrigin
-@RequestMapping("/")
+@RequestMapping
 @RestController
 public class UserController {
 
