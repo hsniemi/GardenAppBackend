@@ -72,10 +72,11 @@ public class UserController {
             List<String> imageList = plantRepo.findImageIdsByUserName(userName);
             if (!imageList.isEmpty()) {
                 for (String s : imageList) {
-                    cloudinary.uploader().destroy(s, ObjectUtils.emptyMap());
+                    if (s != null) {
+                        cloudinary.uploader().destroy(s, ObjectUtils.emptyMap());
+                    }
                 }
             }
-            System.out.println(imageList);
 
             plantRepo.deleteByUserName(userName);
             userRepo.deleteByUserName(userName);

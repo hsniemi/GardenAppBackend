@@ -129,7 +129,7 @@ public class PlantController {
         Plant plant = repository.findById(id).get();
         String image_id = plant.getImage_id();
 
-        if (image_id.isEmpty()) {
+        if (image_id == null) {
             repository.deleteById(id);
             return ResponseEntity.ok().build();
         } else {
